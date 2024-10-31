@@ -10,56 +10,80 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color.fromARGB(255, 137, 181, 218),
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 137, 181, 218),
       resizeToAvoidBottomInset: true,
       body: SafeArea(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image(
-                image: AssetImage('images/street.jpg'),
-                height: 60,
-                width: 60,
-              ),
-              Column(
-                children: [
-                  Text(
-                    'Miss Falafel',
-                    style: TextStyle(fontFamily: 'HomemadeApple', fontSize: 30),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(
+              height: 67,
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image(
+                  image: AssetImage(
+                    'images/street.jpg',
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                ],
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Column(
-            children: [
-              Text(
-                'Login',
-                style: TextStyle(
-                  fontFamily: 'Pacifico',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                  height: 89,
+                  width: 67,
                 ),
+                Column(
+                  children: [
+                    Text(
+                      'Miss',
+                      style: TextStyle(
+                          fontFamily: 'HomemadeApple',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      'Rose',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 133, 18, 10),
+                          fontFamily: 'HomemadeApple',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            const Center(
+              child: Text(
+                'Login',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontFamily: 'HomemadeApple',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 45),
               ),
-            ],
-          ),
-        ],
-      )),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                hintText: 'Email',
+                hintStyle: TextStyle(
+                    fontFamily: 'HomemadeApple',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+                fillColor: Color.fromARGB(255, 133, 18, 10),
+                filled: true,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
