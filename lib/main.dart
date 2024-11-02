@@ -1,3 +1,4 @@
+import 'package:first_project/cool.dart';
 import 'package:first_project/same.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       backgroundColor: const Color.fromARGB(255, 212, 209, 216),
       body: SafeArea(
         child: Column(
@@ -122,12 +123,12 @@ class LoginScreen extends StatelessWidget {
                 focusedBorder: OutlineInputBorder(
                   borderSide:
                       const BorderSide(color: Color.fromARGB(255, 33, 5, 85)),
-                  borderRadius: BorderRadius.circular(100),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderSide:
                       const BorderSide(color: Color.fromARGB(255, 33, 5, 85)),
-                  borderRadius: BorderRadius.circular(100),
+                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
             ),

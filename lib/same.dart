@@ -12,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: const Color.fromARGB(255, 57, 58, 58),
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       'Miss',
                       style: TextStyle(
-                          fontFamily: 'HomemadeApple',
+                          fontFamily: 'StyleScript',
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 30),
@@ -46,8 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       'Rose',
                       style: TextStyle(
-                          color: Color.fromARGB(255, 133, 18, 10),
-                          fontFamily: 'HomemadeApple',
+                          color: Color.fromARGB(255, 236, 167, 190),
+                          fontFamily: 'StyleScript',
                           fontWeight: FontWeight.bold,
                           fontSize: 30),
                     ),
@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black,
-                  fontFamily: 'HomemadeApple',
+                  fontFamily: 'StyleScript',
                   fontWeight: FontWeight.bold,
                   fontSize: 45,
                 ),
@@ -78,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 'The Hardest Choices Require The Strongest Wills',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: 'homemadeApple',
+                  fontFamily: 'StyleScript',
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -86,61 +86,67 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 10,
             ),
-            TextFormField(
-              decoration: InputDecoration(
-                hintText: 'Email',
-                hintStyle: const TextStyle(
-                    fontFamily: 'HomemadeApple',
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-                fillColor: const Color.fromARGB(255, 133, 18, 10),
-                filled: true,
-                prefix: const Icon(
-                  Icons.email_outlined,
-                  color: Colors.black,
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(
-                    color: Color.fromARGB(255, 133, 18, 10),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Email',
+                  hintStyle: const TextStyle(
+                      fontFamily: 'StyleScript',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                  fillColor: const Color.fromARGB(255, 236, 167, 190),
+                  filled: true,
+                  prefix: const Icon(
+                    Icons.email_outlined,
+                    color: Colors.black,
                   ),
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(
-                    color: Color.fromARGB(255, 133, 18, 10),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 236, 167, 190),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  borderRadius: BorderRadius.circular(100),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 236, 167, 190),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
               ),
             ),
             const Padding(
               padding: EdgeInsets.all(6),
             ),
-            TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Password',
-                  hintStyle: const TextStyle(
-                    fontFamily: 'HomemadeApple',
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                  fillColor: const Color.fromARGB(255, 133, 18, 10),
-                  filled: true,
-                  prefix: const Icon(
-                    Icons.password_outlined,
-                    color: Colors.black,
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                        color: Color.fromARGB(255, 133, 18, 10),
-                      ),
-                      borderRadius: BorderRadius.circular(100)),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 133, 18, 10),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30),
+              child: TextFormField(
+                decoration: InputDecoration(
+                    hintText: 'Password',
+                    hintStyle: const TextStyle(
+                      fontFamily: 'StyleScript',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
-                    borderRadius: BorderRadius.circular(100),
-                  )),
+                    fillColor: const Color.fromARGB(255, 236, 167, 190),
+                    filled: true,
+                    prefix: const Icon(
+                      Icons.password_outlined,
+                      color: Colors.black,
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 236, 167, 190),
+                        ),
+                        borderRadius: BorderRadius.circular(10)),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(
+                        color: Color.fromARGB(255, 236, 167, 190),
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    )),
+              ),
             ),
             const SizedBox(
               height: 70,
@@ -149,13 +155,13 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 60,
               width: 97,
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 133, 18, 10),
-                borderRadius: BorderRadius.circular(100),
+                color: const Color.fromARGB(255, 236, 167, 190),
+                borderRadius: BorderRadius.circular(10),
               ),
               child: const Center(
                 child: Text(
-                  'login',
-                  style: TextStyle(fontFamily: 'HomemadeApple', fontSize: 23),
+                  'Login',
+                  style: TextStyle(fontFamily: 'StyleScript', fontSize: 23),
                 ),
               ),
             ),
@@ -169,16 +175,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   'Have\'nt got an account? ',
                   style: TextStyle(
-                    fontFamily: 'HomemadeApple',
+                    fontFamily: 'StyleScript',
                     color: Colors.black,
                   ),
                 ),
                 Text(
                   'Sign in',
                   style: TextStyle(
-                      fontFamily: 'HomemadeApple',
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 133, 18, 10)),
+                    fontFamily: 'StyleScript',
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 236, 167, 190),
+                  ),
                 ),
               ],
             ),
