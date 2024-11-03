@@ -1,3 +1,4 @@
+import 'package:first_project/cool.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -151,20 +152,16 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 70,
             ),
-            Container(
-              height: 60,
-              width: 97,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 236, 167, 190),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Center(
-                child: Text(
-                  'Login',
-                  style: TextStyle(fontFamily: 'StyleScript', fontSize: 23),
-                ),
-              ),
-            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Last(),
+                    ),
+                  );
+                },
+                child: const Text('Login')),
             const SizedBox(
               height: 20,
             ),
