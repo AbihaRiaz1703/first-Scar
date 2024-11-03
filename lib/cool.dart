@@ -26,13 +26,36 @@ class _LastState extends State<Last> {
           const Center(child: Text('Lottery winning number is 10')),
           Container(
             height: 250,
+            width: 300,
             decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 236, 167, 190),
                 borderRadius: BorderRadius.circular(10)),
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: x == 5
-                  ? const Text('Condition Matches')
+              child: x == 10
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.done_all,
+                          color: Colors.red.shade50,
+                          size: 60,
+                        ),
+                        const SizedBox(
+                          height: 12,
+                        ),
+                        Text(
+                          'CONGRATULATIONS!',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.red.shade50),
+                        ),
+                        Text(
+                          'You have WON.The Number You Got Was $x.',
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    )
                   : Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -57,7 +80,7 @@ class _LastState extends State<Last> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          x = random.nextInt(10);
+          x = random.nextInt(15);
           print(x);
           setState(() {});
         },
