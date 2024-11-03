@@ -10,18 +10,13 @@ class Last extends StatefulWidget {
 class _LastState extends State<Last> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.teal,
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.teal,
+        title: const Center(child: Text('Lottery App')),
+      ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Image(image: AssetImage(''))],
-          ),
-        ],
+        children: [],
       ),
     );
   }

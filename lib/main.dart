@@ -1,4 +1,5 @@
 import 'package:first_project/cool.dart';
+// ignore: unused_import
 import 'package:first_project/same.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: Last(),
     );
   }
 }
