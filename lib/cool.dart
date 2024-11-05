@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:first_project/ok.dart';
 import 'package:flutter/material.dart';
 
 class Last extends StatefulWidget {
@@ -76,6 +77,31 @@ class _LastState extends State<Last> {
                     ),
             ),
           ),
+          x == 10
+              ? Center(
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Go(),
+                          ),
+                        );
+                      },
+                      child: const Text('Next Test?')),
+                )
+              : Container(
+                  height: 20,
+                  width: 60,
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 212, 141, 136),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                    ),
+                  ),
+                  child: const Center(child: Text('Again')),
+                ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
