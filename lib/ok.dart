@@ -1,3 +1,4 @@
+import 'package:first_project/book.dart';
 import 'package:flutter/material.dart';
 
 class Go extends StatefulWidget {
@@ -34,15 +35,7 @@ class _GoState extends State<Go> {
                 child: Container(
                   height: 100,
                   decoration: const BoxDecoration(color: Colors.red),
-                  child: const Center(child: Text('large')),
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: Container(
-                  height: 100,
-                  decoration: BoxDecoration(color: Colors.red.shade300),
-                  child: const Center(child: Text('container')),
+                  child: const Center(child: Text('Wish You BEST OF LUCK')),
                 ),
               ),
             ],
@@ -66,9 +59,20 @@ class _GoState extends State<Go> {
                     BoxShadow(color: Colors.black, blurRadius: 30)
                   ],
                   border: Border.all(color: Colors.black)),
-              child: const Center(child: Text('hello')),
+              child: const Center(child: Text('GO ON!')),
             ),
           ),
+          const SizedBox(height: 40),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Look(),
+                  ),
+                );
+              },
+              child: const Text('Best Of Luck')),
         ],
       ),
     );
